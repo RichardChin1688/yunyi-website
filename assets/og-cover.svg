@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="云燚 · 中医药养生与有机食养">
+  <title>云燚 · 中医药养生 与 有机食养</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b2118"/>
+      <stop offset="0.55" stop-color="#3a2c20"/>
+      <stop offset="1" stop-color="#241c14"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.16" cy="0.08" r="0.85">
+      <stop offset="0" stop-color="#a8802f" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#a8802f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a8802f"/>
+      <stop offset="1" stop-color="#c9a86a"/>
+    </linearGradient>
+    <g id="flame">
+      <path d="M32 12c1.9 3.1 1.5 5.6-.5 7.6-1.9 1.9-2.2 4.2-1 6.4 1.6-1.2 2.4-2.7 2.6-4.6 2.4 2.2 3.6 4.9 3.6 8.1 0 4-2.9 7-7 7s-7-3-7-7c0-5.4 4.5-9.5 9.2-17.5z"/>
+    </g>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- 装饰圆环 -->
+  <circle cx="1010" cy="150" r="250" fill="none" stroke="#c9a86a" stroke-width="1" opacity="0.18"/>
+  <circle cx="1010" cy="150" r="190" fill="none" stroke="#c9a86a" stroke-width="1" opacity="0.12"/>
+
+  <!-- 品牌标识（四火） -->
+  <g transform="translate(96,150)" fill="#c9a86a">
+    <rect x="0" y="0" width="104" height="104" rx="26" fill="#1e1712" stroke="#c9a86a" stroke-width="1.6" opacity="0.96"/>
+    <g transform="translate(20,20) scale(0.72)">
+      <use href="#flame" transform="translate(-9.5,6.5)"/>
+      <use href="#flame" transform="translate(9.5,6.5)"/>
+      <use href="#flame" transform="translate(-9.5,20)"/>
+      <use href="#flame" transform="translate(9.5,20)"/>
+    </g>
+    <circle cx="52" cy="52" r="7" fill="#8c3a2e"/>
+  </g>
+
+  <!-- 品牌名 -->
+  <text x="232" y="243" font-family="Songti SC, STSong, Noto Serif SC, Source Han Serif SC, SimSun, serif"
+        font-size="86" font-weight="700" fill="#f6efdf" letter-spacing="10">云燚</text>
+
+  <!-- 拼音 -->
+  <text x="238" y="290" font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="22" fill="#a8802f" letter-spacing="9">Y U N Y I</text>
+
+  <!-- 分隔线 -->
+  <rect x="96" y="336" width="72" height="4" rx="2" fill="url(#goldline)"/>
+
+  <!-- 主标题 -->
+  <text x="96" y="410" font-family="Songti SC, STSong, Noto Serif SC, Source Han Serif SC, SimSun, serif"
+        font-size="46" font-weight="700" fill="#f2ece2" letter-spacing="3">中医药养生 与 有机食养</text>
+
+  <!-- 副句 -->
+  <text x="96" y="470" font-family="PingFang SC, Microsoft YaHei, Helvetica Neue, sans-serif"
+        font-size="26" fill="#c9bda9" letter-spacing="1">以温养之力，焕从容气色</text>
+
+  <!-- 底部信息 -->
+  <text x="96" y="548" font-family="PingFang SC, Microsoft YaHei, Helvetica Neue, sans-serif"
+        font-size="20" fill="#8d8071" letter-spacing="1">深圳市云明宇琛文化传播有限公司　·　2016 年成立　·　连续经营 9 年</text>
+
+  <text x="96" y="590" font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="20" fill="#a8802f" letter-spacing="2">yunyi.homes</text>
+
+  <!-- 右下角定位词 -->
+  <text x="1104" y="590" text-anchor="end"
+        font-family="PingFang SC, Microsoft YaHei, Helvetica Neue, sans-serif"
+        font-size="19" fill="#8d8071">中医药养生 · 有机食养 · 深圳</text>
+</svg>

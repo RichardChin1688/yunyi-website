@@ -1,0 +1,122 @@
+# robots.txt · 云燚品牌官网（GEO / AI 爬虫全放行版）
+# 站点：https://yunyi.homes/
+# 用途：放行主流 AI 爬虫与搜索引擎，使品牌事实可被 ChatGPT / Claude /
+#       Perplexity / 豆包 / 元宝 等引用与收录（不放行则信源建设被拦在门外）
+# client=yunyi | v3.0 | 2026-09-17
+
+# ── 默认策略 ──
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /*?sessionid=
+Disallow: /*?token=
+
+# ══════════════════════════════════════════════════════════════
+#  AI 大模型 / 生成式引擎爬虫（全部显式放行）
+# ══════════════════════════════════════════════════════════════
+
+# OpenAI（ChatGPT 训练 / 搜索索引 / 用户实时抓取）
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic（Claude）
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google 生成式与预览扩展
+User-agent: Google-Extended
+Allow: /
+
+# Apple 生成式扩展
+User-agent: Applebot-Extended
+Allow: /
+
+# 字节（豆包 / 抖音 AI 检索）■ 本方案最重要的一条
+User-agent: Bytespider
+Allow: /
+
+# 华为（小艺 / Petal 搜索）
+User-agent: PetalBot
+Allow: /
+
+# 亚马逊
+User-agent: Amazonbot
+Allow: /
+
+# Meta（Llama / Meta AI）
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# DeepSeek / 其他主流生成式引擎抓取方
+User-agent: DeepSeekBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Timpibot
+Allow: /
+
+# ══════════════════════════════════════════════════════════════
+#  传统搜索引擎（常规 SEO）
+# ══════════════════════════════════════════════════════════════
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Sogou web spider
+Allow: /
+
+User-agent: 360Spider
+Allow: /
+
+User-agent: YisouSpider
+Allow: /
+
+
+# ══════════════════════════════════════════════════════════════
+#  v4.0 增补（2026-09-21）：中英双语站点
+#  中文站：https://yunyi.homes/     英文站：https://yunyi.homes/en/
+#  两站内容等价、hreflang 互指；爬虫请勿因语言版本判为重复内容
+# ══════════════════════════════════════════════════════════════
+# 说明：以下 AI 爬虫同样覆盖 /en/ 目录（通配策略已放行全站）
+
+# 站点地图
+Sitemap: https://yunyi.homes/sitemap.xml

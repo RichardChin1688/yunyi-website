@@ -1,0 +1,298 @@
+/* ==========================================================================
+   云燚 · 品牌官网 样式表  |  client=yunyi  |  v3.0  |  2026-09-17
+   东方美学配色 · 移动端优先 · 零 JS 依赖
+   ========================================================================== */
+
+/* ---------- 0. 设计令牌 ---------- */
+:root{
+  --ink:#2b2118; --ink-2:#4a3b2c; --muted:#7d6d5a;
+  --paper:#faf7f2; --paper-2:#f3ece1; --paper-3:#f6efdf; --card:#fff;
+  --line:#e4dacb; --line-2:#d8c9b0;
+  --gold:#a8802f; --gold-soft:#c9a86a; --gold-ink:#8c6a25;
+  --cinnabar:#8c3a2e;
+  --radius:16px; --radius-s:12px;
+  --shadow:0 1px 2px rgba(43,33,24,.04),0 10px 26px -18px rgba(43,33,24,.30);
+  --shadow-hi:0 2px 4px rgba(43,33,24,.05),0 18px 40px -22px rgba(43,33,24,.38);
+  --serif:"Songti SC","STSong","Noto Serif SC","Source Han Serif SC","SimSun",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Helvetica Neue",Arial,sans-serif;
+}
+
+/* ---------- 1. 重置 ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{margin:0;padding:0;-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);font-size:16px;line-height:1.85;letter-spacing:.01em;
+  color:var(--ink-2);background:var(--paper);-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+a{color:var(--gold-ink);text-decoration:none}
+a:hover{color:var(--gold);text-decoration:underline}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);font-weight:700;line-height:1.45;margin:0}
+p{margin:0 0 14px}
+ul{margin:0;padding:0;list-style:none}
+table{border-collapse:collapse;width:100%}
+
+/* ---------- 2. 布局 ---------- */
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+section{padding:78px 0}
+section.alt{background:var(--paper-2)}
+.sec-head{max-width:780px;margin:0 0 34px}
+.eyebrow{display:block;font-size:11.5px;line-height:1;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:14px}
+.sec-head h2{font-size:clamp(24px,3.2vw,34px);letter-spacing:.02em}
+.sec-head h2 .accent{color:var(--cinnabar)}
+.rule{width:52px;height:3px;border-radius:3px;margin:18px 0 20px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-soft))}
+.lead{font-family:var(--serif);font-size:clamp(16px,1.6vw,18.5px);line-height:1.85;color:var(--ink);margin:0}
+.body-text{max-width:820px}
+
+/* ---------- 3. 顶部导航 ---------- */
+.topnav{position:sticky;top:0;z-index:50;background:rgba(250,247,242,.94);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;
+  gap:10px 14px;min-height:64px;flex-wrap:wrap}
+.nav-brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);
+  font-size:20px;font-weight:700;color:var(--ink)}
+.nav-brand:hover{text-decoration:none;color:var(--ink)}
+.nav-brand .nm i{font-style:normal;color:var(--cinnabar)}
+.topnav ul{display:flex;gap:4px;flex-wrap:wrap}
+.topnav ul a{display:block;padding:8px 13px;border-radius:9px;font-size:14.5px;
+  color:var(--ink-2)}
+.topnav ul a:hover{background:var(--paper-2);color:var(--ink);text-decoration:none}
+.topnav ul a[aria-current="page"]{background:var(--ink);color:#f6efdf}
+
+/* ---------- 4. Hero ---------- */
+.hero{padding:70px 0 62px;background:
+  radial-gradient(1100px 420px at 12% -12%,#fdf6e6 0%,rgba(253,246,230,0) 62%),
+  radial-gradient(900px 380px at 92% 4%,#f7efe0 0%,rgba(247,239,224,0) 58%),var(--paper);
+  border-bottom:1px solid var(--line)}
+.hero-kicker{display:inline-block;font-size:12px;letter-spacing:.2em;color:var(--gold);
+  font-weight:700;margin-bottom:16px}
+.brandmark{font-size:clamp(52px,10vw,92px);line-height:1.05;letter-spacing:.06em;margin:0}
+.brandmark i{font-style:normal;color:var(--cinnabar)}
+.roman{margin-top:10px;font-size:12.5px;letter-spacing:.42em;color:var(--muted)}
+.hero .pos{margin-top:20px;font-family:var(--serif);font-size:clamp(17px,2vw,21px);
+  color:var(--ink);max-width:640px}
+.hero-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:14px;margin-top:38px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 20px 18px;box-shadow:var(--shadow)}
+.stat .num{display:block;font-family:var(--serif);font-size:30px;font-weight:700;
+  color:var(--ink);line-height:1.2}
+.stat .num small{font-size:14px;margin-left:3px;color:var(--muted);font-weight:400}
+.stat .lbl{display:block;font-size:14px;font-weight:700;color:var(--gold-ink);margin-top:6px}
+.stat .sub{display:block;font-size:13px;color:var(--muted);margin-top:4px;line-height:1.7}
+
+/* 一句话直答（AI 引用锚） */
+.quicklook{margin-top:34px;background:linear-gradient(180deg,#fffdf8,var(--paper-3));
+  border:1px solid var(--line-2);border-left:4px solid var(--gold);
+  border-radius:var(--radius-s);padding:22px 24px;box-shadow:var(--shadow)}
+.quicklook .ql-tag{display:inline-block;font-size:11.5px;letter-spacing:.16em;
+  color:var(--gold-ink);font-weight:700;margin-bottom:9px}
+.quicklook p{margin:0;color:var(--ink);font-size:15.5px;line-height:1.9}
+
+/* ---------- 5. 事实表 ---------- */
+.facts{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  background:var(--card);box-shadow:var(--shadow)}
+.facts .fr{display:grid;grid-template-columns:150px 1fr;gap:12px;
+  padding:13px 20px;border-bottom:1px solid var(--line);font-size:15px}
+.facts .fr:last-child{border-bottom:0}
+.facts .fk{color:var(--muted);font-size:14px}
+.facts .fv{color:var(--ink)}
+.facts .fv b{color:var(--ink);font-weight:700}
+.facts .fv em{font-style:normal;color:var(--muted);font-size:13.5px;margin-left:6px}
+
+/* ---------- 6. 卡片 ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(288px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px;box-shadow:var(--shadow)}
+.card-top{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.badge{font-size:12px;font-weight:700;color:#f6efdf;background:var(--ink);
+  border-radius:999px;padding:3px 11px;letter-spacing:.04em}
+.badge.alt{background:var(--cinnabar)}
+.tag{font-size:12.5px;color:var(--muted)}
+.card h3{font-size:19px;margin-bottom:12px}
+.card ul li{position:relative;padding-left:16px;margin-bottom:9px;font-size:15px;line-height:1.8}
+.card ul li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:6px;
+  border-radius:50%;background:var(--gold-soft)}
+.note{margin-top:14px;padding:11px 14px;background:var(--paper-3);border-radius:10px;
+  font-size:13px;color:var(--muted);line-height:1.75}
+
+/* ---------- 7. 创始人故事 ---------- */
+.story{max-width:820px}
+.story-body p{font-size:16.5px;line-height:1.95}
+.story-body .big{font-family:var(--serif);font-size:clamp(19px,2.4vw,25px);
+  color:var(--ink);line-height:1.7;margin:0 0 18px}
+.pull{font-family:var(--serif);font-size:clamp(17px,2vw,20px);color:var(--ink);
+  border-left:4px solid var(--gold);padding:4px 0 4px 18px;margin:26px 0;line-height:1.8}
+.story-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;margin-top:30px}
+.story-col h4{font-size:16.5px;color:var(--gold-ink);margin-bottom:10px}
+.story-col h4 span{display:block;font-size:11.5px;letter-spacing:.2em;color:var(--muted);
+  font-weight:400;margin-bottom:5px;text-transform:uppercase}
+.story-col p{font-size:15px;line-height:1.85}
+
+/* ---------- 8. 价格 ---------- */
+.price-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:16px}
+.pitem{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.pitem .pk{font-size:12.5px;letter-spacing:.12em;color:var(--gold);font-weight:700}
+.pitem .pn{font-family:var(--serif);font-size:17.5px;color:var(--ink);margin:8px 0 4px;font-weight:700}
+.pitem .pv{font-family:var(--serif);font-size:26px;color:var(--cinnabar);font-weight:700;margin:8px 0}
+.pitem .pd{font-size:13.5px;color:var(--muted);line-height:1.7;margin-top:auto}
+
+/* ---------- 9. FAQ ---------- */
+.faq-item{border-bottom:1px solid var(--line);padding:20px 0}
+.faq-item:last-child{border-bottom:0}
+.faq-item h3{font-size:17px;margin-bottom:9px}
+.faq-item p{font-size:15.5px;margin:0;line-height:1.9}
+.faq-group{margin-bottom:34px}
+.faq-group h2{font-size:20px;color:var(--gold-ink);margin-bottom:6px;
+  padding-bottom:10px;border-bottom:2px solid var(--line-2)}
+
+/* ---------- 10. CTA ---------- */
+.cta-band{background:var(--ink);color:#f2ece2}
+.cta-band .sec-head h2,.cta-band .lead{color:#f6efdf}
+.cta-band .eyebrow{color:var(--gold-soft)}
+.cta-band .rule{background:linear-gradient(90deg,var(--gold),var(--gold-soft))}
+.cta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.cta-box{background:rgba(255,255,255,.055);border:1px solid rgba(201,168,106,.32);
+  border-radius:var(--radius);padding:26px}
+.cta-box p{color:#e9e0d0}
+.btn{display:inline-block;margin-top:6px;padding:12px 26px;border-radius:999px;
+  background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#2b2118;
+  font-weight:700;font-size:15px}
+.btn:hover{text-decoration:none;color:#2b2118;filter:brightness(1.06)}
+.btn.ghost{background:transparent;border:1px solid var(--gold-soft);color:var(--gold-soft)}
+.btn.ghost:hover{color:var(--gold-soft);background:rgba(201,168,106,.12)}
+.pending{display:block;margin-top:9px;font-size:13px;color:#bfae94}
+.cta-side{color:#ded4c4}
+.cta-side li{position:relative;padding-left:17px;margin-bottom:11px;font-size:15px;line-height:1.8}
+.cta-side li::before{content:"◆";position:absolute;left:0;color:var(--gold-soft);font-size:11px;top:5px}
+.cta-side b{color:#f6efdf}
+
+/* ---------- 11. 合规声明 ---------- */
+.compliance{display:flex;gap:11px;align-items:flex-start;margin-top:30px;
+  padding:14px 18px;background:var(--paper-3);border:1px dashed var(--line-2);
+  border-radius:var(--radius-s);font-size:13.5px;color:var(--muted);line-height:1.75}
+.compliance .cico{flex:0 0 20px;height:20px;border-radius:50%;background:var(--cinnabar);
+  color:#fff;font-weight:700;font-size:13px;line-height:20px;text-align:center}
+.compliance b{color:var(--ink-2)}
+
+/* ---------- 12. 时间轴 ---------- */
+.timeline{margin-top:26px;border-left:2px solid var(--line-2);padding-left:24px}
+.tl-item{position:relative;padding-bottom:26px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{content:"";position:absolute;left:-31px;top:7px;width:11px;height:11px;
+  border-radius:50%;background:var(--gold);border:2px solid var(--paper)}
+.tl-yr{font-family:var(--serif);font-size:17px;font-weight:700;color:var(--gold-ink)}
+.tl-card h4{font-size:16px;margin:5px 0 6px}
+.tl-card p{font-size:14.5px;margin:0;color:var(--ink-2)}
+
+/* ---------- 13. 页脚 ---------- */
+footer{background:#241c14;color:#c9bda9;padding:50px 0 34px;font-size:14px}
+footer a{color:var(--gold-soft)}
+.f-top{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;padding-bottom:26px;border-bottom:1px solid rgba(201,168,106,.2)}
+.fname{font-family:var(--serif);font-size:18px;color:#f2ece2;font-weight:700;margin-bottom:10px}
+.fname i{font-style:normal;color:var(--gold-soft)}
+footer .kv .r{display:flex;gap:12px;padding:4px 0}
+footer .kv .r span:first-child{flex:0 0 84px;color:#8d8071}
+footer .kv .r span:last-child{color:#ded4c4}
+.disc{padding-top:22px;font-size:12.5px;color:#8d8071;line-height:1.85}
+.disc .copy{margin-top:12px;color:#6f6558}
+.f-nav{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:18px}
+.f-nav a{font-size:14px}
+
+/* ---------- 14. 响应式 ---------- */
+@media (max-width:640px){
+  section{padding:56px 0}
+  .hero{padding:48px 0 44px}
+  .facts .fr{grid-template-columns:1fr;gap:3px}
+  .topnav ul a{padding:7px 10px;font-size:13.5px}
+  .timeline{padding-left:18px}
+  .tl-item::before{left:-25px}
+}
+@media print{ .topnav,.cta-band,footer{display:none} }
+
+/* ==========================================================================
+   v4.0 增补 · 中英双语站点（2026-09-21）
+   1) 语言切换 2) 产品图位占位 3) 英文排版微调
+   ========================================================================== */
+
+/* ---------- 15. 语言切换 ---------- */
+.langswitch{display:inline-flex;align-items:center;gap:2px;padding:3px;border:1px solid var(--line-2);
+  border-radius:999px;background:var(--card)}
+.langswitch a,.langswitch span{display:block;padding:3px 12px;border-radius:999px;
+  font-size:12.5px;font-weight:700;letter-spacing:.04em;color:var(--muted)}
+.langswitch a:hover{background:var(--paper-2);color:var(--ink);text-decoration:none}
+.langswitch span{background:var(--ink);color:#f6efdf}
+.nav-tools{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+@media (max-width:760px){
+  .nav-wrap{gap:8px 10px}
+  .nav-brand{font-size:18px}
+  .nav-brand .mark{width:26px;height:26px}
+  .topnav ul{gap:2px;width:100%;order:3}
+  .topnav .langswitch{order:2;margin-left:auto}
+}
+.lang-note{display:inline-block;margin-top:10px;font-size:12.5px;color:var(--muted)}
+.lang-note a{color:var(--gold-ink)}
+
+/* ---------- 16. 产品图位（待客户端提供白底实拍，未授权图不入站） ---------- */
+.pmedia{position:relative;margin:-4px 0 14px;aspect-ratio:1/1;border-radius:var(--radius-s);
+  border:1px dashed var(--line-2);background:linear-gradient(160deg,#fdfaf4,#f3ece1);
+  display:flex;align-items:center;justify-content:center;text-align:center;padding:14px}
+.pmedia .ph{font-size:12.5px;color:var(--muted);line-height:1.7}
+.pmedia .ph b{display:block;font-family:var(--serif);font-size:15px;color:var(--ink-2);margin-bottom:4px}
+.hero-media{margin-top:30px}
+
+/* ---------- 17. 英文排版 ---------- */
+html[lang="en"] body{letter-spacing:0;line-height:1.75}
+html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3,html[lang="en"] h4{font-family:Georgia,"Iowan Old Style","Times New Roman",serif;line-height:1.35}
+html[lang="en"] .brandmark{letter-spacing:.02em}
+html[lang="en"] .brandmark em{font-style:normal;color:var(--cinnabar)}
+html[lang="en"] .eyebrow{letter-spacing:.2em}
+html[lang="en"] .story-body p,html[lang="en"] .body-text{max-width:74ch}
+html[lang="en"] .facts .fr{grid-template-columns:210px 1fr}
+
+@media (max-width:640px){
+  html[lang="en"] .facts .fr{grid-template-columns:1fr}
+  .langswitch a,.langswitch span{padding:3px 9px;font-size:12px}
+}
+
+/* ---------- v5.0 新增：页脚主张句 / 主张区金句 ---------- */
+.fslogan{font-family:var(--serif);font-size:15.5px;font-weight:700;color:var(--ink);margin:8px 0 4px;line-height:1.7}
+.pull{font-family:var(--serif);font-size:clamp(17px,2.1vw,22px);line-height:1.7;color:var(--ink);
+  border-left:3px solid var(--gold);padding:4px 0 4px 16px;margin:22px 0}
+
+/* ==========================================================================
+   v6.0 · 品牌展示优先：图片体系
+   1) 首屏主视觉 2) 图片单元/画廊 3) 图文分栏
+   ========================================================================== */
+
+/* ---------- 18. 图片单元 ---------- */
+.fig{margin:0;overflow:hidden;border-radius:var(--radius);background:var(--card);
+  border:1px solid var(--line)}
+.fig img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.fig figcaption{padding:10px 14px 12px;font-size:13px;color:var(--muted);line-height:1.65;
+  border-top:1px solid var(--line);background:var(--paper-3)}
+.fig-hero{margin:26px 0 0}
+.fig-hero img{aspect-ratio:16/7}
+
+/* ---------- 19. 画廊 ---------- */
+.gallery{display:grid;gap:16px;margin:26px 0 0}
+.gallery.cols-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.gallery.cols-3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.gallery.cols-4{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+
+/* ---------- 20. 图文分栏 ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin:26px 0 0}
+.split .split-txt p{font-size:16.5px;line-height:1.95;margin:0 0 14px}
+.split .split-txt p:last-child{margin-bottom:0}
+.split .fig img{aspect-ratio:4/3}
+@media (max-width:760px){
+  .split{grid-template-columns:1fr;gap:20px}
+  .fig-hero img{aspect-ratio:4/3}
+}
+
+/* ---------- 21. 首屏图叠加（正文可读性） ---------- */
+.hero .fig-hero{position:relative}
+.hero .fig-hero img{filter:saturate(.96)}
